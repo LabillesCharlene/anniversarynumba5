@@ -1,0 +1,56 @@
+<html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Cici's Home</title> //the only name i can think of AHHHH
+  <link rel="icon" type="image/x-icon" href="logo.png"> // logo i drew
+ 
+  //pixel font
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="petStyle.css">
+</head>
+<body>
+
+<audio id="bg music" loop autoplay>
+  <source src="bg music.mp3" type="audio/mpeg">
+</audio>
+
+
+<div id="app">
+    <img id="pet-image" src="idle.png" alt="Pet" />
+    <div id="bars">
+      <span id="hunger-text">100</span>
+      <span id="sleep-text">SLEEP: 100</span>
+    </div>
+</div>
+
+<div id="sleep-btn">
+  <button onclick="sleepPet()">(っ- ‸ - ς)ᶻ 𝗓 𐰁</button>
+</div>
+<div id="feed-btn">
+  <button onclick="feedPet()">🎂 Feed the bastard</button>
+</div>
+<div id="talk-btn">
+  <button onclick="talkPet()">💬 Talk</button>
+  <p id="pet-message">💬 Click "Talk" to chat with Cici</p>
+</div>
+
+<div id="note-controls">
+  <button id="clipboard-btn">📋❗❗</button>
+<button id="music-toggle">🔊</button>
+</div>
+
+<div id="clipboard-panel" style="display:none;">
+  <textarea id="note-text" rows="6" cols="30" placeholder="Write your note here for Cha or whatever ur heart desires     "></textarea>
+  <br />
+  <button id="save-note-btn">Save Note</button>
+  <button id="delete-note-btn">Delete Note</button>
+</div>
+</div>
+  </div>
+<script src="petScript.js"></script>
+</body>
+</html>

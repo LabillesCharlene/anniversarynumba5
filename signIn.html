@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  <style>
+    body {
+      font-family: 'Press Start 2P', monospace;
+      background-color: #fefae0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    input, button {
+      font-family: inherit;
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>User Log In</h2>
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="checkPassword()">Enter</button>
+
+  <script>
+    const correctPassword = "Day5"; // set your custom password here
+
+    function checkPassword() {
+      const entered = document.getElementById('password').value;
+      if (entered === correctPassword) {
+        document.body.innerHTML = "<h2>Preparing...</h2>";
+        setTimeout(() => {
+          window.location.href = "pet.html"; // replace with your main page filename
+        }, 2000); // 2 second loading screen
+      } else {
+        alert("Incorrect password! HINT: What Day is this gift for?");
+      }
+    }
+  </script>
+</body>
+</html>
