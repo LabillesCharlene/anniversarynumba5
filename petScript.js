@@ -1,3 +1,4 @@
+//alot alot alot alot of consts cuz i was so ambitious
 const hungerDisplay = document.getElementById('hunger');
 const sleepText = document.getElementById('sleep-text');
 const petImage = document.getElementById('pet-image');
@@ -14,6 +15,7 @@ const bgMusic = document.getElementById("bg music");
 const musicToggle = document.getElementById("music-toggle");
 const LOCALSTORAGE_KEY = 'virtualPetNote';
 
+//defaulting cici to be starving when u find her
 let hunger = 100;
 let sleep = 100;
 let animationInterval = null;
@@ -22,9 +24,9 @@ let sleepLoopInterval = null;
 let musicEnabled = true;
 const appContainer = document.getElementById('app');
 let messageTimeout;
-bgMusic.volume = 0.2;
+bgMusic.volume = 0.2; //volume of bg music, also did u know bg music will not play unless user interacts with webpage first? stupid rite?
 
-
+//arraying the frames i drew para program will just put them together later on
 const eatFrames = ['eat1.png','eat2.png'];
 const sleepFrames = ['sleep.png'];
 const talkFrames = ['talk1.png', 'talk2.png','talk1.png', 'talk2.png'];
@@ -32,6 +34,7 @@ const messages = ["elo elo elo elo elo elo","bat ang tagal mo?","omzim","GIMME S
 
 let lastMessageIndex = -1;
 
+//listens for music button (turn on/off)
 musicToggle.addEventListener("click", () => {
   if (bgMusic.paused) {
     bgMusic.play();
@@ -51,6 +54,7 @@ window.addEventListener("click", () => {
   }
 }, { once: true });
 
+//when u chat cici it picks a message from the messages array
 function getRandomMessage() {
   let newIndex;
   do {
@@ -67,6 +71,7 @@ function updateHungerDisplay() {
   hungerDisplay.textContent = hunger;
 }
 
+// Preload all images para d mabagal animation, like it wont load them all when u click on it, its already uploaded
 function preloadImages(frames) {
   frames.forEach(src => {
     const img = new Image();
